@@ -1,0 +1,30 @@
+﻿@model TechOpsWebApp.Models.Account
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dd style="font-size:30px">
+            <b>@Html.DisplayFor(model => model.AccountName)</b>
+        </dd>
+
+        <dd>
+            <img src="@Url.Content(@Model.photo)" height="300" width="300" />
+  
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccountId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
