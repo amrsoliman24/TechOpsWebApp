@@ -85,6 +85,7 @@ namespace TechOpsWebApp.Controllers
             {
                 using (TechOpsDBEntities dbmodel = new TechOpsDBEntities())
                 {
+                    Console.WriteLine("test");
                     Team member = dbmodel.Teams.Where(x => x.UserID == id).FirstOrDefault();
                     dbmodel.Teams.Remove(member);
                     dbmodel.SaveChanges();                   
